@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styleLogin.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+
+    <title>Adoção</title>
+  </head>
+  <body class="bg-dark text-light">
+    <header>
+      <h1>Inscrição</h1>
+    </header>
+
+    <main>
+      <form action="https://formsubmit.co/gabrielmachado.f29@gmail.com" method="post">
+        <div class="form-item">
+          <label for="nome">Nome: </label>
+          <input type="text" name="nome" id="nome" required />
+        </div>
+        <div class="form-item">
+          <label for="telefone">Telefone: </label>
+          <input
+            type="text"
+            name="telefone"
+            id="telefone"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="email">E-mail: </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+          />
+        </div>
+        <div class="form-item">
+          <span for="">Deseja receber notificações?</span>
+
+          <div class="form-item-radio">
+            <input type="radio" name="renda" id="renda1000" value="sim" />
+            <label for="renda1000">Sim, desejo receber</label>
+          </div>
+
+          <div class="form-item-radio">
+            <input type="radio" name="renda" id="renda5000" value="não" />
+            <label for="renda5000">Não desejo receber</label>
+          </div>
+
+          <span id="erro-renda" class="msgm-erro">Preencha o campo</span>
+        </div>
+
+        <div class="form-item">
+          <label for="intencao">Informe alguma coisa que você gostaria de ver no site:</label>
+          <div>
+            <textarea name="intencao" id="intencao"></textarea>
+          </div>
+        </div>
+        
+
+        <div class="form-item">
+          <input type="reset" value="Limpar" />
+          <input type="submit" value="Enviar" />
+        </div>
+      </form>
+    </main>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>

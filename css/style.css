@@ -1,0 +1,60 @@
+* {
+    font-size: 16px;
+}
+
+header {
+    height: 20vh;
+}
+
+.carousel-inner {
+    height: 80vh;
+}
+
+.icon {
+    font-size: 2rem;
+}
+@media (max-width: 992px) {
+    header {
+        height: 100%;
+    }
+}
+
+.carousel-inner {
+    height: 90%;
+}
+
+section {
+    height: 80vh;
+}
+
+footer {
+    height: 20vh;
+}
+
+input[type='number'] {
+    padding: 5px;
+    width: 50px;
+  }
+  
+  form label {
+    padding-left: 20px;
+  }
+  
+  .result-style {
+    display: flex;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px rgb(0 0 0 / 0.7);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .result-style img {
+    max-height: 200px;
+    padding-right: 20px;
+    border-radius: 20px;
+  }
+

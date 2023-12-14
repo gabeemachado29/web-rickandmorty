@@ -1,0 +1,51 @@
+let formulario = document.querySelector("form");
+
+const validarDados = (nome, telefone, email, renda, intencao) => {
+  let control = true;
+
+  if (nome.value.trim() == "") {
+    nome.style.backgroundColor = "red";
+    control = false;
+  }
+
+  if (telefone.value.trim() == "") {
+    telefone.style.backgroundColor = "red";
+    control = false;
+  }
+  if (email.value.trim() == "") {
+    email.style.backgroundColor = "red";
+    control = false;
+  }
+
+  if (renda == null) {
+    let elementoErro = document.querySelector("#erro-renda");
+    elementoErro.classList.add("msgm-erro--active");
+    control = false;
+  }
+
+  return control;
+};
+
+formulario.addEventListener("submit", (event) => {
+  let nome = document.querySelector("#nome");
+  let telefone = document.querySelector("#telefone");
+  let email = document.querySelector("#email");
+  let renda = document.querySelector("input[name='renda']:checked");
+  let intencao = document.querySelector("#intencao");
+
+  if (validarDados(nome, telefone, email, renda, intencao)) {
+    let adotante = {
+      nome: nome.value.trim(),
+      telefone: telefone.value.trim(),
+      email: email.value.trim(),
+      renda: renda.value,
+      intencao: intencao.value.trim(),
+    };
+
+    let adotanteJson = JSON.stringify(adotante);
+    console.log(adotanteJson);
+
+    let adotante2 = JSON.parse(adotanteJson);
+    console.log(adotante2);
+  } else event.preventDefault();
+});
